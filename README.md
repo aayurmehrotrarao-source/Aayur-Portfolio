@@ -1,2 +1,2 @@
-# Aayur-Portfolio
-Aayur Portfolio
+Aayur Mehrotra Porrtfolio
+I'm Aayur Mehrotra, an aspiring software developer and Information Technology engineering student passionate about coding, problem-solving, and building modern web applications. I enjoy exploring new technologies, developing practical projects, and turning creative ideas into functional digital solutions. I'm always eager to learn, improve my skills, and grow as a developer.
