@@ -1,0 +1,1140 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: #f7f8fb;
+    color: #191919;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar-custom {
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 12px;
+    font-weight: 600;
+    color: #202020;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+.navigation a {
+    font-size: 11px;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+.navigation a:hover {
+    color: #d4a900;
+}
+
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero-section {
+    position: relative;
+
+    min-height: 680px;
+    height: 100vh;
+
+    overflow: hidden;
+
+    background: #f7f8fb;
+}
+
+
+/* =====================================================
+   LARGE YELLOW TOP-RIGHT SHAPE
+===================================================== */
+
+.yellow-corner {
+    position: absolute;
+
+    top: -170px;
+    right: -100px;
+
+    width: 600px;
+    height: 480px;
+
+    background: #ffc936;
+
+    z-index: 1;
+
+    border-bottom-left-radius: 55% 45%;
+    border-bottom-right-radius: 20% 30%;
+}
+
+
+/* =====================================================
+   HERO CONTAINER
+===================================================== */
+
+.hero-container {
+    position: relative;
+    z-index: 5;
+
+    height: 100%;
+}
+
+.hero-text {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    padding-top: 30px;
+    max-width: 590px;
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.eyebrow {
+    color: #d1aa20;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+
+/* =====================================================
+   HERO HEADING
+===================================================== */
+
+.hero-content h1 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: clamp(55px, 5.2vw, 76px);
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+
+    color: #202020;
+
+    margin-bottom: 25px;
+}
+
+
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
+
+.hero-description {
+    max-width: 500px;
+
+    color: #858585;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.yellow-button,
+.dark-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 25px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    border-radius: 5px;
+
+    transition: 0.25s ease;
+}
+
+.yellow-button {
+    background: #ffc936;
+    color: #171717;
+
+    border: 1px solid #ffc936;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dark-button {
+    background: #292c30;
+    color: #fff;
+
+    border: 1px solid #292c30;
+}
+
+.yellow-button:hover {
+    background: #171717;
+    border-color: #171717;
+
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+.dark-button:hover {
+    background: #ffc936;
+    border-color: #ffc936;
+
+    color: #171717;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   PORTRAIT COLUMN
+===================================================== */
+
+.hero-image-column {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait-wrapper {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   ORGANIC YELLOW BLOB BEHIND IMAGE
+===================================================== */
+
+.portrait-blob {
+    position: absolute;
+
+    width: 400px;
+    height: 420px;
+
+    right: 0;
+    bottom: 45px;
+
+    background: #f2cf58;
+
+    z-index: 1;
+
+    border-radius:
+        48% 52% 42% 58% /
+        55% 44% 56% 45%;
+
+    transform: rotate(7deg);
+}
+
+
+/* =====================================================
+   PROFILE IMAGE
+===================================================== */
+
+/*
+   The yellow border is attached directly
+   to the image.
+
+   Therefore the border automatically follows
+   the displayed image dimensions.
+*/
+
+.profile-image {
+    position: relative;
+
+    z-index: 4;
+
+    height: 460px;
+    width: auto;
+
+    max-width: 390px;
+
+    display: block;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    border: 8px solid #ffc936;
+
+    border-radius: 0;
+
+    align-self: center;
+}
+
+
+/* =====================================================
+   ABOUT SECTION
+===================================================== */
+
+.about-section {
+    padding: 120px 0;
+
+    background: #fff;
+}
+
+.section-title {
+    color: #999;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    margin-bottom: 55px;
+}
+
+.about-section h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 60px;
+    font-weight: 400;
+
+    line-height: 0.98;
+}
+
+.about-section h2 span {
+    color: #e4b31e;
+}
+
+.about-large {
+    font-size: 24px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+    max-width: 650px;
+}
+
+.about-small {
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    max-width: 620px;
+}
+
+
+/* =====================================================
+   SKILLS SECTION
+===================================================== */
+
+.skills-section {
+    padding: 120px 0;
+
+    background: #1c1c1c;
+
+    color: #fff;
+}
+
+.skills-section .section-title {
+    color: #777;
+}
+
+.skill-box {
+    min-height: 300px;
+
+    padding: 35px;
+
+    border: 1px solid #3b3b3b;
+
+    transition: 0.3s ease;
+}
+
+.skill-box:hover {
+    background: #ffc936;
+
+    border-color: #ffc936;
+
+    color: #111;
+
+    transform: translateY(-8px);
+}
+
+.skill-number {
+    font-size: 10px;
+
+    color: #777;
+
+    margin-bottom: 45px;
+}
+
+.skill-icon {
+    font-size: 27px;
+
+    margin-bottom: 22px;
+}
+
+.skill-box h3 {
+    font-size: 25px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.skill-box p {
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   PROJECTS SECTION
+===================================================== */
+
+.projects-section {
+    padding: 120px 0;
+
+    background: #f7f8fb;
+}
+
+.projects-heading {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 60px;
+
+    font-weight: 400;
+
+    margin-bottom: 55px;
+}
+
+.project-card {
+    position: relative;
+
+    min-height: 350px;
+
+    padding: 35px;
+
+    background: #fff;
+
+    border: 1px solid #e4e4e4;
+
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #222;
+}
+
+.yellow-project {
+    background: #ffc936;
+
+    border-color: #ffc936;
+}
+
+.project-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #8d8d8d;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+}
+
+.yellow-project .project-header {
+    color: #685510;
+}
+
+.project-content {
+    margin-top: 80px;
+}
+
+.project-content h3 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    margin-bottom: 15px;
+}
+
+.project-content p {
+    max-width: 450px;
+
+    color: #858585;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+.yellow-project p {
+    color: #5e501f;
+}
+
+.project-link {
+    position: absolute;
+
+    left: 35px;
+    bottom: 30px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+.project-link i {
+    margin-left: 5px;
+}
+
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section {
+    padding: 120px 0;
+
+    background: #1c1c1c;
+
+    color: #fff;
+}
+
+.contact-section .section-title {
+    color: #777;
+}
+
+.contact-section h2 {
+    font-family: "DM Serif Display", serif;
+
+    font-size: 65px;
+
+    font-weight: 400;
+
+    line-height: 0.98;
+
+    margin-bottom: 30px;
+}
+
+.contact-section h2 span {
+    color: #ffc936;
+}
+
+.contact-description {
+    color: #888;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    max-width: 400px;
+}
+
+.social-links {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #444;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.25s ease;
+}
+
+.social-links a:hover {
+    background: #ffc936;
+
+    border-color: #ffc936;
+
+    color: #111;
+}
+
+.instagram-handle {
+    margin-top: 22px;
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.input-group-custom {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.input-group-custom label {
+    color: #777;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+.input-group-custom input,
+.input-group-custom textarea {
+    width: 100%;
+
+    background: transparent;
+
+    color: #fff;
+
+    border: none;
+
+    border-bottom: 1px solid #444;
+
+    padding: 12px 0;
+
+    outline: none;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 13px;
+
+    resize: none;
+}
+
+.input-group-custom input:focus,
+.input-group-custom textarea:focus {
+    border-color: #ffc936;
+}
+
+.input-group-custom input::placeholder,
+.input-group-custom textarea::placeholder {
+    color: #666;
+}
+
+.contact-form button {
+    align-self: flex-start;
+
+    border: none;
+
+    background: #ffc936;
+
+    color: #111;
+
+    padding: 13px 22px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s ease;
+}
+
+.contact-form button:hover {
+    background: #fff;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: #111;
+
+    color: #666;
+
+    padding: 25px 0;
+
+    font-size: 10px;
+}
+
+.footer-content {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        height: auto;
+
+        min-height: 950px;
+    }
+
+    .hero-text {
+        height: 500px;
+    }
+
+    .hero-image-column {
+        height: 480px;
+    }
+
+    .yellow-corner {
+        width: 500px;
+
+        height: 380px;
+    }
+
+    .portrait-wrapper {
+        transform: scale(0.9);
+    }
+
+    .profile-image {
+        height: 480px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* NAVIGATION */
+
+    .navbar-custom {
+        height: 65px;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .navigation a {
+        font-size: 9px;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        min-height: auto;
+
+        padding-top: 65px;
+    }
+
+    .yellow-corner {
+        width: 360px;
+
+        height: 300px;
+
+        right: -130px;
+
+        top: -90px;
+    }
+
+    .hero-text {
+        height: auto;
+
+        padding: 70px 0 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 48px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .hero-image-column {
+        height: 550px;
+    }
+
+    .portrait-wrapper {
+        transform: scale(0.85);
+    }
+
+    .portrait-blob {
+        width: 380px;
+        height: 390px;
+
+        right: -10px;
+    }
+
+    .profile-image {
+        height: 500px;
+
+        max-width: 390px;
+
+        border-width: 8px;
+    }
+
+
+    /* ABOUT */
+
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
+        padding: 85px 20px;
+    }
+
+    .about-section h2 {
+        font-size: 48px;
+
+        margin-bottom: 40px;
+    }
+
+    .about-large {
+        font-size: 20px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-heading {
+        font-size: 48px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-section h2 {
+        font-size: 50px;
+
+        margin-bottom: 45px;
+    }
+
+
+    /* FOOTER */
+
+    .footer-content {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .navigation a {
+        display: none;
+    }
+
+    .hero-content h1 {
+        font-size: 42px;
+    }
+
+    .hero-image-column {
+        height: 470px;
+    }
+
+    .portrait-wrapper {
+        transform: scale(0.72);
+    }
+
+    .profile-image {
+        height: 500px;
+    }
+
+}
+
+/* =====================================================
+   FIXED HERO PORTRAIT + YELLOW BLOB
+   Keep the photo centered over the yellow shape.
+===================================================== */
+
+.hero-section {
+    overflow: hidden;
+}
+
+.hero-image-column {
+    position: relative;
+    min-width: 0;
+}
+
+.portrait-wrapper {
+    position: relative;
+    width: 100%;
+    height: 560px;
+    min-width: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    isolation: isolate;
+    transform: none;
+}
+
+.portrait-blob {
+    position: absolute;
+    z-index: -1;
+    width: min(100%, 390px);
+    height: 410px;
+    left: 50%;
+    right: auto;
+    bottom: 24px;
+    transform: translateX(-50%) rotate(5deg);
+    border-radius: 48% 52% 42% 58% / 55% 44% 56% 45%;
+}
+
+.portrait-frame {
+    display: none;
+}
+
+.profile-image {
+    position: relative;
+    z-index: 1;
+    display: block;
+    height: min(500px, 88%);
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    border: 0;
+    border-radius: 0;
+    align-self: flex-end;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .hero-section {
+        height: auto;
+        min-height: 0;
+        padding-bottom: 35px;
+    }
+
+    .hero-image-column {
+        height: auto;
+        min-height: 480px;
+    }
+
+    .portrait-wrapper {
+        height: 500px;
+    }
+
+    .portrait-blob {
+        width: min(82vw, 370px);
+        height: 370px;
+        bottom: 20px;
+    }
+
+    .profile-image {
+        height: 470px;
+        max-width: 90%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .hero-image-column {
+        min-height: 0;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .portrait-wrapper {
+        height: 440px;
+        width: 100%;
+        transform: none;
+    }
+
+    .portrait-blob {
+        width: min(82vw, 340px);
+        height: 330px;
+        bottom: 18px;
+    }
+
+    .profile-image {
+        height: 420px;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .portrait-wrapper {
+        height: 390px;
+    }
+
+    .portrait-blob {
+        width: min(84vw, 300px);
+        height: 290px;
+        bottom: 16px;
+    }
+
+    .profile-image {
+        height: 370px;
+        max-width: 92%;
+    }
+}
+
+
+/* Final portrait style: circular photo with a clean yellow border */
+.portrait-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    position: relative;
+    transform: none;
+}
+
+.portrait-blob {
+    display: none !important;
+}
+
+.profile-image {
+    display: block;
+    width: min(360px, 78vw);
+    height: min(360px, 78vw);
+    max-width: none;
+    object-fit: cover;
+    object-position: center top;
+    border: 7px solid #facc15;
+    border-radius: 50%;
+    box-sizing: border-box;
+    align-self: auto;
+    flex: 0 0 auto;
+    box-shadow: 0 8px 28px rgba(250, 204, 21, 0.22);
+}
+
+@media (max-width: 991px) {
+    .hero-image-column {
+        min-height: 0;
+        height: auto;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .profile-image {
+        width: min(340px, 72vw);
+        height: min(340px, 72vw);
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        width: min(290px, 76vw);
+        height: min(290px, 76vw);
+        border-width: 6px;
+    }
+}
